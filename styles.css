@@ -1,0 +1,107 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  background: #f4f6fb;
+  color: #111827;
+}
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+body {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+.container {
+  width: min(380px, 100%);
+}
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 18px 40px rgba(16, 24, 40, 0.08);
+}
+h1 {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+}
+.help-text {
+  margin: 0 0 24px;
+  color: #6b7280;
+}
+.field {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.password-field {
+  position: relative;
+}
+.password-field input {
+  padding-right: 92px;
+}
+label {
+  font-weight: 600;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 0.98rem;
+}
+button {
+  font: inherit;
+}
+#toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 36px;
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  cursor: pointer;
+}
+.inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+.secondary-link {
+  color: #2563eb;
+  text-decoration: none;
+}
+.error {
+  min-height: 1.4rem;
+  color: #b91c1c;
+  margin-bottom: 16px;
+}
+button.primary {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button.primary:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+.result {
+  margin-top: 18px;
+  color: #0f766e;
+  font-weight: 600;
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1>Sign in</h1>
+        <p class="help-text">Use your company account to sign in.</p>
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="username">Email or username</label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              autocomplete="username"
+              placeholder="admin@example.com"
+            />
+          </div>
+          <div class="field password-field">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              placeholder="At least 8 characters"
+            />
+            <button id="toggle-password" type="button">Show</button>
+          </div>
+          <div class="inline">
+            <label class="checkbox">
+              <input id="remember" name="remember" type="checkbox" />
+              Remember me
+            </label>
+            <a
+              class="secondary-link"
+              href="forgot-password.html"
+              id="forgot-password"
+              >Forgot password?</a
+            >
+          </div>
+          <p id="error-message" class="error" aria-live="polite"></p>
+          <button id="login-button" class="primary" type="submit" disabled>
+            Sign in
+          </button>
+        </form>
+        <div id="result" class="result"></div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
