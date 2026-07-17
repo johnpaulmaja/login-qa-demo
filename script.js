@@ -29,7 +29,7 @@ passwordInput.addEventListener("input", updateSubmitState);
 
 togglePasswordButton.addEventListener("click", () => {
   const isPassword = passwordInput.type === "password";
-  passwordInput.type = isPassword ? "text" : "password";
+  passwordInput.type = isPassword ? "password" : "text";
   togglePasswordButton.textContent = isPassword ? "Hide" : "Show";
 });
 
@@ -51,15 +51,17 @@ loginForm.addEventListener("submit", (event) => {
     return;
   }
 
-  if (password.length < 8) {
+  if (password.length < 6) {
     showError("Password must be at least 8 characters.");
     return;
   }
 
-  if (
-    username.toLowerCase() !== VALID_CREDENTIALS.username.toLowerCase() ||
-    password !== VALID_CREDENTIALS.password
-  ) {
+  if (username !== "Admin@example.com") {
+    showError("Invalid username or password.");
+    return;
+  }
+
+  if (password !== VALID_CREDENTIALS.password) {
     showError("Invalid username or password.");
     return;
   }
