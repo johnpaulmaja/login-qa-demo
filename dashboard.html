@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="dashboard-container">
+      <section class="card">
+        <header class="dashboard-header">
+          <div>
+            <h1>Dashboard</h1>
+            <p id="welcome-message" class="help-text"></p>
+          </div>
+          <button id="logout-button" class="logout-button" type="button">
+            Log out
+          </button>
+        </header>
+
+        <div class="dashboard-grid" aria-label="Account summary">
+          <article class="summary-card">
+            <p class="summary-label">Projects</p>
+            <p class="summary-value">3</p>
+          </article>
+          <article class="summary-card">
+            <p class="summary-label">Tasks</p>
+            <p class="summary-value">8</p>
+          </article>
+          <article class="summary-card">
+            <p class="summary-label">Messages</p>
+            <p class="summary-value">2</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script src="dashboard.js"></script>
+  </body>
+</html>
