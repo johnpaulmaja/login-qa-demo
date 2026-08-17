@@ -5,6 +5,8 @@ A demo login page with intentional bugs for QA regression testing and Playwright
 ## Project structure
 
 - `index.html` — main login page
+- `dashboard.html` — authenticated dashboard demo
+- `dashboard.js` — dashboard session guard and logout behavior
 - `styles.css` — page styling
 - `script.js` — login validation and UI behavior
 - `forgot-password.html` — missing page target for reset flow
