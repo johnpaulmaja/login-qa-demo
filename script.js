@@ -29,8 +29,9 @@ passwordInput.addEventListener("input", updateSubmitState);
 
 togglePasswordButton.addEventListener("click", () => {
   const isPassword = passwordInput.type === "password";
-  passwordInput.type = isPassword ? "password" : "text";
+  passwordInput.type = isPassword ? "text" : "password";
   togglePasswordButton.textContent = isPassword ? "Hide" : "Show";
+  togglePasswordButton.setAttribute("aria-pressed", String(isPassword));
 });
 
 loginForm.addEventListener("submit", (event) => {
@@ -51,12 +52,12 @@ loginForm.addEventListener("submit", (event) => {
     return;
   }
 
-  if (password.length < 6) {
+  if (password.length < 8) {
     showError("Password must be at least 8 characters.");
     return;
   }
 
-  if (username !== "Admin@example.com") {
+  if (username.toLowerCase() !== VALID_CREDENTIALS.username.toLowerCase()) {
     showError("Invalid username or password.");
     return;
   }

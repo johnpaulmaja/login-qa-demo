@@ -3,6 +3,11 @@
   background: #f4f6fb;
   color: #111827;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 html,
 body {
   margin: 0;
@@ -63,6 +68,8 @@ button {
   background: transparent;
   color: #2563eb;
   cursor: pointer;
+  min-width: 24px;
+  min-height: 24px;
 }
 .inline {
   display: flex;
@@ -104,4 +111,23 @@ button.primary:disabled {
   margin-top: 18px;
   color: #0f766e;
   font-weight: 600;
+}
+
+@media (max-width: 400px) {
+  body {
+    padding: 16px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .inline {
+    gap: 8px;
+  }
+
+  .checkbox,
+  .secondary-link {
+    white-space: nowrap;
+  }
 }

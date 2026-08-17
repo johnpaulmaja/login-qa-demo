@@ -20,6 +20,7 @@
               type="text"
               autocomplete="username"
               placeholder="admin@example.com"
+              required
             />
           </div>
           <div class="field password-field">
@@ -30,6 +31,7 @@
               type="password"
               autocomplete="current-password"
               placeholder="At least 8 characters"
+              required
             />
             <button id="toggle-password" type="button">Show</button>
           </div>
@@ -50,7 +52,7 @@
             Sign in
           </button>
         </form>
-        <div id="result" class="result"></div>
+        <div id="result" class="result" role="status"></div>
       </section>
     </main>
     <script src="script.js"></script>
